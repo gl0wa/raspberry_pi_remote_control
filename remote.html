@@ -1,0 +1,25 @@
+<html>
+  <head>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+        $('button').bind('click', function(event){
+          var action = $(this).data('action');
+          $.get('/remote_actions?action=' + action);
+        })
+
+      });
+    </script>
+
+  </head>
+  <body>
+    <h1>Lamp remote control</h1>
+
+    <div>
+      <button data-action="lampOn">On</button>
+      <button data-action="lampOff">Off</button>
+    </div>
+  </body>
+</html>
